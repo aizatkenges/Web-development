@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms'; // обязательно
 import { CommonModule } from '@angular/common'; // тоже желательно
-<<<<<<< HEAD
-import { ApiService } from '../../services/api.service';
-import { AuthService } from '../../interceptors/auth.service';
-=======
 
->>>>>>> 39df03afda20cb9ed8290d7a0e0378500b0c4153
+import { ApiService } from '../../services/api.service';
+
+
+
+
 @Component({
   selector: 'app-login',
   standalone: true, // вот это ключевое!
@@ -18,7 +18,7 @@ import { AuthService } from '../../interceptors/auth.service';
 export class LoginComponent {
   email = '';
   password = '';
-<<<<<<< HEAD
+
   constructor(private apiService: ApiService, private router: Router) {}
 
   login() {
@@ -32,16 +32,3 @@ export class LoginComponent {
       }
     });
   }}
-=======
-
-  constructor(private router: Router) {}
-
-  login() {
-    if (this.email === 'admin@example.com' && this.password === '1234') {
-      this.router.navigate(['/dashboard']);
-    } else {
-      alert('Неверный логин или пароль');
-    }
-  }
-}
->>>>>>> 39df03afda20cb9ed8290d7a0e0378500b0c4153
